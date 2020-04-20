@@ -1,0 +1,35 @@
+port: 7890
+
+socks-port: 7891
+
+external-controller: 127.0.0.1:9090
+
+experimental:
+  interface-name: 以太网
+
+dns:
+  enable: true
+  ipv6: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  nameserver:
+    - 223.5.5.5
+
+proxies:
+  - name: SS
+    type: ss
+    server: ss.server.domain
+    port: 8388
+    cipher: aes-256-gcm
+    password: password
+    udp: true
+
+rules:
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,SS
