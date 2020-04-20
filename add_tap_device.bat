@@ -61,22 +61,6 @@ if %errorlevel% neq 0 goto :loop
 echo (Re-)enabling TAP network device...
 netsh interface set interface "%DEVICE_NAME%" admin=enabled
 
-echo Configuring TAP device subnet...
-netsh interface ip set address %DEVICE_NAME% static 10.0.0.2 255.255.255.0
-netsh interface ipv6 set address %DEVICE_NAME% fdfe:dcba:9876::2
-if %errorlevel% neq 0 (
-  echo Could not set TAP network device subnet. >&2
-  exit /b 1
-)
-
-echo Configuring primary DNS...
-netsh interface ip set dnsservers %DEVICE_NAME% static 10.0.0.2 validate=no
-netsh interface ipv6 set dnsservers %DEVICE_NAME% static fdfe:dcba:9876::2 validate=no
-if %errorlevel% neq 0 (
-  echo Could not configure TAP device primary DNS. >&2
-  exit /b 1
-)
-
 echo Set all adapters metric to auto.
 for /f "skip=3 tokens=4" %%a in ('netsh interface show interface') do (
   netsh interface ip set interface %%a metric=automatic

@@ -9,6 +9,8 @@ call add_tap_device.bat
 call clash.vbs
 call tun2socks.vbs
 
-netsh interface ip add route 0.0.0.0/0 %DEVICE_NAME% 10.0.0.1 metric=0 store=active
-netsh interface ipv6 add route ::/0 %DEVICE_NAME% fdfe:dcba:9876::1 metric=0 store=active
+for /f "skip=3 tokens=4" %%a in ('netsh interface show interface') do (
+  netsh interface ipv6 set interface %%a routerdiscovery=disabled
+)
+netsh interface ip add route 0.0.0.0/0 %DEVICE_NAME% 10.255.0.1 metric=0 store=active
 ipconfig /flushdns

@@ -9,7 +9,6 @@ experimental:
 
 dns:
   enable: true
-  ipv6: true
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
   nameserver:

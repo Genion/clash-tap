@@ -2,7 +2,7 @@
 
 clash from https://github.com/Dreamacro/clash/releases
 
-tun2socks from https://github.com/Jigsaw-Code/outline-client/blob/master/third_party/badvpn/win32 (support IPv6)
+tun2socks from https://github.com/eycorsican/go-tun2socks/releases (not support IPv6)
 
 # how to use
 
