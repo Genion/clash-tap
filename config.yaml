@@ -11,8 +11,11 @@ dns:
   enable: true
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter:
+    - '*.msftncsi.com'
+    - '*.msftconnecttest.com'
   nameserver:
-    - 223.5.5.5
+    - 114.114.114.114
 
 proxies:
   - name: SS
