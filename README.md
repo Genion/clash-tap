@@ -4,6 +4,8 @@ clash from https://github.com/Dreamacro/clash/releases
 
 tun2socks from https://github.com/eycorsican/go-tun2socks/releases (not support IPv6)
 
+You can use clash-tap with http://yacd.haishan.me/ from https://github.com/haishanh/yacd
+
 # how to use
 
 replace `以太网` in `config.yaml` with your current outbound netadapter name from
