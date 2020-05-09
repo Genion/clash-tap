@@ -4,6 +4,8 @@ clash from https://github.com/Dreamacro/clash/releases
 
 tun2socks from https://github.com/Jigsaw-Code/outline-client/blob/master/third_party/badvpn/win32 (support IPv6)
 
+You can use clash-tap with http://yacd.haishan.me/ from https://github.com/haishanh/yacd
+
 # how to use
 
 replace `以太网` in `config.yaml` with your current outbound netadapter name from
