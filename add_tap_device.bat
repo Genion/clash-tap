@@ -63,7 +63,7 @@ netsh interface set interface "%DEVICE_NAME%" admin=enabled
 
 echo Configuring TAP device subnet...
 netsh interface ip set address %DEVICE_NAME% static 10.0.0.2 255.255.255.0
-netsh interface ipv6 set address %DEVICE_NAME% fdfe:dcba:9876::2
+netsh interface ipv6 set address %DEVICE_NAME% fdfe:dcba:9876::2/127
 if %errorlevel% neq 0 (
   echo Could not set TAP network device subnet. >&2
   exit /b 1
