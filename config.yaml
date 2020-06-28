@@ -1,11 +1,8 @@
-port: 7890
-
-socks-port: 7891
+mixed-port: 7890
 
 external-controller: 127.0.0.1:9090
 
-experimental:
-  interface-name: 以太网
+interface-name: 以太网
 
 dns:
   enable: true
