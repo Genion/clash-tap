@@ -1,5 +1,7 @@
 mixed-port: 7890
 
+ipv6: true
+
 external-controller: 127.0.0.1:9090
 
 interface-name: 以太网
