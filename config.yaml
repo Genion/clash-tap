@@ -8,7 +8,7 @@ dns:
   enable: true
   listen: 0.0.0.0:53
   default-nameserver:
-    - 114.114.114.114
+    - 223.5.5.5
   enhanced-mode: fake-ip
   fake-ip-filter:
     - '*.msftncsi.com'
