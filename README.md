@@ -4,7 +4,9 @@ clash from https://github.com/Dreamacro/clash/releases
 
 tun2socks from https://github.com/eycorsican/go-tun2socks/releases (not support IPv6)
 
-You can use clash-tap with http://yacd.haishan.me/ from https://github.com/haishanh/yacd
+You can use clash-tap with http://clash.razord.top/ from https://github.com/Dreamacro/clash-dashboard
+
+Or with http://yacd.haishan.me/ from https://github.com/haishanh/yacd
 
 # how to use
 
